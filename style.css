@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.modeSwitch {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hour {
+    width: 3px;
+    height: 70px;
+    background-color: black;
+    transform: rotate(0deg);
+    transform-origin: bottom;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    translate: -50%;
+
+}
+
+.minut {
+    width: 3px;
+    height: 90px;
+    background-color: black;
+    transform: rotate(5deg);
+    transform-origin: bottom;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    translate: -50%;
+}
+
+.second {
+    width: 3px;
+    height: 95px;
+    background-color: red;
+    transform: rotate(15deg);
+    transform-origin: bottom;
+    position: absolute;
+    top: 2.5px;
+    left: 50%;
+    translate: -50%;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.digital-clock .time {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+
+.digital-clock .date {
+    text-align: center;
+    color: black;
+    letter-spacing: .5px;
+    font-size: 14px;
+}
+
+.digital-clock .date .dayNumber {
+    background-color: black;
+    color: white;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+
+/* start dark mode classes  */
+
+
+.darkBg {
+    background-color: black;
+}
+
+.modeSwitch.active {
+    color: black;
+    background-color: white;
+}
+
+.clock.active {
+    border-color: white;
+}
+
+.hour.active {
+    background-color: white;
+}
+
+.minut.active {
+    background-color: white;
+}
+
+.digital-clock .time.active {
+    color: white;
+}
+
+.digital-clock .date.active {
+    color: white;
+}
+
+.date .dayNumber.active {
+    background-color: white;
+    color: black;
+}
